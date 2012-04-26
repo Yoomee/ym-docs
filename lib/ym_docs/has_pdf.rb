@@ -1,4 +1,7 @@
 module YmDocs::HasPdf
+  
+  require 'kconv'
+  
   def has_pdf
     class_eval do
       file_accessor :file
@@ -33,7 +36,7 @@ module YmDocs::HasPdf
     def extract_text_from_pdf(num_chars)
       temp_path = "#{temp_file_path}-text#{rand(1000)}.txt"
       if system("pdftotext -enc UTF-8 #{temp_file_path} #{temp_path} 2>&1") && File.exists?(temp_path)
-        File.new(temp_path).read(num_chars)
+        File.new(temp_path).read(num_chars).toutf8
       end
     end
   
