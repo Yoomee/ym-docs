@@ -1,0 +1,10 @@
+a.download-doc {
+  padding-left: 65px;
+  height: 65px;
+  display: inline-block;
+  line-height: 65px;
+  background: url("icon-pdf.png") no-repeat;
+}
+a.download-doc-pdf {
+  background-image: url("icon-pdf.png");  
+}
