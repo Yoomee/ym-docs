@@ -13,8 +13,12 @@ module YmDocs::HasPdf
   
   module InstanceMethods
 
+    def file_ext
+      file.try(:ext)
+    end
+
     def file_path
-      file.try(:file).try(:path)
+      file.try(:path)
     end
     
     private  
@@ -27,17 +31,21 @@ module YmDocs::HasPdf
     end
     
     def extract_text_from_pdf(num_chars)
-      temp_path = "#{file_path}-text#{rand(1000)}.txt"
-      if system("pdftotext -enc UTF-8 #{file_path} #{temp_path} 2>&1") && File.exists?(temp_path)
+      temp_path = "#{temp_file_path}-text#{rand(1000)}.txt"
+      if system("pdftotext -enc UTF-8 #{temp_file_path} #{temp_path} 2>&1") && File.exists?(temp_path)
         File.new(temp_path).read(num_chars)
       end
     end
   
     def generate_file_image
-      return true if errors.present? || !changed.include?("file_uid")
-      temp_path = "#{file_path}-preview#{rand(1000)}.png"
-      system("convert #{file_path}[0] #{temp_path}")
+      return true if errors.present? || !changed.include?("file_uid")  
+      temp_path = "#{temp_file_path}-preview#{rand(1000)}.png"
+      system("convert #{temp_file_path}[0] #{temp_path}")
       self.image = File.new(temp_path)
+    end
+
+    def temp_file_path
+      file.try(:file).try(:path)
     end
   
   end

@@ -15,7 +15,7 @@ describe YmDocs::HasPdf do
     let(:resource) {FactoryGirl.build(:resource)}
     
     it 'returns first 10 characters from file' do
-      resource.stub(:file_path => File.expand_path('../test/assets/test.pdf', File.dirname(__FILE__)))
+      resource.stub(:temp_file_path => File.expand_path('../test/assets/test.pdf', File.dirname(__FILE__)))
       resource.send(:extract_text_from_pdf, 10).should == "Class apte"
     end
     
