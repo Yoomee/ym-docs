@@ -19,6 +19,11 @@ describe YmDocs::HasPdf do
       resource.send(:extract_text_from_pdf, 10).should == "Class apte"
     end
     
+    after do
+      test_assets_path = File.expand_path('../test/assets', File.dirname(__FILE__))
+      system("rm #{test_assets_path}/test.pdf-text*")
+    end
+    
   end
   
 end
