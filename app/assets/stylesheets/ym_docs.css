@@ -3,8 +3,50 @@ a.download-doc {
   height: 65px;
   display: inline-block;
   line-height: 65px;
-  background: url("icon-pdf.png") no-repeat;
+  background: url("icon-file.png") no-repeat;
+}
+a.download-doc-aif,
+a.download-doc-m4a,
+a.download-doc-mp3,
+a.download-doc-wav,
+a.download-doc-wma {
+  background-image: url("icon-audio.png");  
+}
+a.download-doc-xls,
+a.download-doc-csv,
+a.download-doc-xlt,
+a.download-doc-xlsx {
+  background-image: url("icon-excel.png");  
+}
+a.download-doc-bmp,
+a.download-doc-gif,
+a.download-doc-jpg,
+a.download-doc-jpeg,
+a.download-doc-png,
+a.download-doc-psd {
+  background-image: url("icon-image.png");  
 }
 a.download-doc-pdf {
   background-image: url("icon-pdf.png");  
 }
+a.download-doc-ppt,
+a.download-doc-pptx{
+  background-image: url("icon-ppt.png");  
+}
+a.download-doc-avi,
+a.download-doc-flv,
+a.download-doc-mov,
+a.download-doc-mp4,
+a.download-doc-wmv {
+  background-image: url("icon-video.png");  
+}
+a.download-doc-doc,
+a.download-doc-docx,
+a.download-doc-rtf,
+a.download-doc-txt,
+a.download-doc-wps {
+  background-image: url("icon-word.png");  
+}
+a.download-doc-zip {
+  background-image: url("icon-word.zip");  
+} 

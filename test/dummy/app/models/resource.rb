@@ -1,5 +1,5 @@
 class Resource < ActiveRecord::Base
   
-  has_pdf
+  has_doc
   
 end

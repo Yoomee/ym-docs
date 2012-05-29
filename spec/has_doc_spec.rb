@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe YmDocs::HasPdf do
+describe YmDocs::HasDoc do
   
-  describe "has_pdf" do
+  describe "has_doc" do
 
-    it "includes YmDocs::HasPdf::InstanceMethods module" do
-      Resource.included_modules.should include(YmDocs::HasPdf::InstanceMethods)
+    it "includes YmDocs::HasDoc::InstanceMethods module" do
+      Resource.included_modules.should include(YmDocs::HasDoc::InstanceMethods)
     end
   
   end
