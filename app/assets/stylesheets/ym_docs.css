@@ -49,4 +49,65 @@ a.download-doc-wps {
 }
 a.download-doc-zip {
   background-image: url("icon-word.zip");  
-} 
+}
+
+[class^="icon-doc"],
+[class*=" icon-doc"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("icon-file-14.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+.icon-doc-aif,
+.icon-doc-m4a,
+.icon-doc-mp3,
+.icon-doc-wav,
+.icon-doc-wma {
+  background-image: url("icon-audio-14.png");  
+}
+.icon-doc-xls,
+.icon-doc-csv,
+.icon-doc-xlt,
+.icon-doc-xlsx {
+  background-image: url("icon-excel-14.png");  
+}
+.icon-doc-bmp,
+.icon-doc-gif,
+.icon-doc-jpg,
+.icon-doc-jpeg,
+.icon-doc-png,
+.icon-doc-psd {
+  background-image: url("icon-image-14.png");  
+}
+.icon-doc-pdf {
+  background-image: url("icon-pdf-14.png");  
+}
+.icon-doc-ppt,
+.icon-doc-pptx{
+  background-image: url("icon-ppt-14.png");  
+}
+.icon-doc-avi,
+.icon-doc-flv,
+.icon-doc-mov,
+.icon-doc-mp4,
+.icon-doc-wmv {
+  background-image: url("icon-video-14.png");  
+}
+.icon-doc-doc,
+.icon-doc-docx,
+.icon-doc-rtf,
+.icon-doc-txt,
+.icon-doc-wps {
+  background-image: url("icon-word-14.png");  
+}
+.icon-doc-zip {
+  background-image: url("icon-word.zip");  
+}
+
+
