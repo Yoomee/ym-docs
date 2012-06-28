@@ -1,3 +1,5 @@
+require 'ym_core'
+
 require "ym_docs/engine"
 
 module YmDocs
