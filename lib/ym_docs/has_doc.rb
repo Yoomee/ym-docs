@@ -48,7 +48,7 @@ module YmDocs::HasDoc
     def generate_file_image
       return true if !pdf? || errors.present? || !changed.include?("file_uid")  
       temp_path = "#{temp_file_path}-preview#{rand(1000)}.png"
-      system("convert #{temp_file_path}[0] #{temp_path}")
+      system("gs -sDEVICE=jpeg -sOutputFile=#{temp_path} -dLastPage=1 #{temp_file_path}")
       self.image = File.new(temp_path)
     end
 
